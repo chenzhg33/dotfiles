@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/data1/mm64/crestxu/QQMail/mmtenpay/mmpaybasic/mmpayuserroll/mmpaybilleventprocessor/cgi'
-let g:netrw_dirhist_2='/data1/mm64/crestxu/QQMail/mmtenpay/mmpaybasic/mmpayuserroll/mmpaybilleventprocessor'
-let g:netrw_dirhist_3='/data1/mm64/crestxu/QQMail/mmtenpay/mmpaybasic/mmpaycert/proto'
-let g:netrw_dirhist_4='/data/frp_0.44.0_linux_amd64'
