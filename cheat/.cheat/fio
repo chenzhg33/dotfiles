@@ -1,0 +1,7 @@
+# -rw=read(顺序读);write(顺序写);randread(随机读);randwrite(随机写);readwrite(顺序读写混合);randrw(随机读写混合)
+# -rwmixread 读写混合时，读占的比例，默认值为50（表示50%）
+# -bs 块大小
+# -size 文件大小
+# -numjobs 并发数
+# 文件系统4k顺序读测试
+fio -filename=/tmp/speed_test.txt -direct=1 -rw=read -bs=1M -size=900M -numjobs=32  -group_reporting -name=test-read

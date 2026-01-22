@@ -1,0 +1,20 @@
+## $(( )) 语法
+```bash
+i=$((j + 3))
+lvcreate -L "$((24 * 1024))" -n lv99 vg99
+q=$((29 / 6)) r=$((29 % 6))
+if test "$((a%4))" = 0; then ...
+```
+
+### let命令 和 (()) 语法是等价的
+
+```bash
+let a=17 + 23      # WRONG
+let a="17 + 23"    # Right
+let 'a = 17 + 23'  # Right
+let a=17 a+=23     # Right (2 arithmetic expressions)
+
+let a[1]=1+1       # Wrong (try after touch a1=1+1 or with shopt -s failglob)
+let 'a[1]=1+1'     # Right
+let a\[1\]=1+1     # Right, but very odd.
+```

@@ -1,0 +1,2 @@
+# 101 is octal (decimal is 65, character is A), the result will print 'A'
+printf \\101

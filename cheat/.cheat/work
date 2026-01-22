@@ -1,0 +1,12 @@
+```bash
+#! /bin/bash
+first=1
+na=()
+for arg in "$@"
+do
+	[[ $first -eq 1 ]] && arg=("$arg -g admin");first=0
+	na+=("$arg")
+done
+
+./inner_fs $cli "${na[@]}"
+```

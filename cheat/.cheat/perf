@@ -1,0 +1,5 @@
+# perf record表示记录，-F 99表示每秒99次，-p 13204是进程号，即对哪个进程进行分析，-g表示记录调用栈，sleep 30则是持续30秒。
+perf record -F 99 -p 13204 -g -- sleep 30
+
+# perf record命令可以统计每个调用栈出现的百分比，然后从高到低排列
+perf report -n --stdio 

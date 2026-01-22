@@ -1,0 +1,1 @@
+/home/crestxu/QQMail/mm3rd/mmtools/blade/vim/syntax/blade.vim

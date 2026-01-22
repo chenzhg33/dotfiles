@@ -1,0 +1,17 @@
+# Dump file in octal format
+od /path/to/binaryfile
+od -o /path/to/binaryfile
+od -t o2 /path/to/binaryfile
+
+# Dump file in hexadecimal format
+od -x /path/to/binaryfile
+od -t x2 /path/to/binaryfile
+
+# Dump file in hexadecimal format, with hexadecimal offsets and a space between each byte
+od -A x -t x1 /path/to/binaryfile
+
+# -A d 表示第一列的地址的显示格式为10进制
+# # -t d1 内容显示为1个字节1个字节显示, 显示为十进制
+# # -t x2 内容显示为2个字节一组显示, 显示为16进制
+# # -t -a 内容显示按字符显示
+echo "123456\t" | od  -A d  -t d1

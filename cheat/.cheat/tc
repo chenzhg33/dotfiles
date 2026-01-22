@@ -1,0 +1,12 @@
+#! /bin/bash
+ip=10.55.86.226
+rate=$2
+
+tc qdisc add dev eth1 root handle 1: htb default 10
+
+tc class add dev eth1 parent 1:0 classid 1:1 htb rate 10000mbit
+tc class add dev eth1 parent 1:0 classid 1:2 htb rate 10000mbit
+tc qdisc add dev eth1 parent 1:1 handle 10: netem loss 0%
+tc qdisc add dev eth1 parent 1:2 handle 20: netem loss ${rate}%   
+
+tc filter add dev eth1 parent 1:0 protocol ip prio 1 u32 match ip dst $ip [match ip dport $dport 0xffff] flowid 1:2

@@ -1,0 +1,2 @@
+# find gb2312 source code and convert to utf8
+find source_dir  -regextype posix-egrep -regex  ".*\.(cpp|h|hpp)" | while read file ; do if (enca -Lchinese  $file | grep -q "GB2312"); then echo  $file; fi; done

@@ -1,0 +1,13 @@
+```bash
+#! /bin/sh
+baseName=$(basename $0)
+usage() {
+    echo Usage: ./$baseName cmd concurrent
+    exit 127
+}
+
+cmd="$1"
+concurrent=$2
+
+seq 1 100000000000 | xargs -I'{}' -n1 -P$concurrent sh -c "$cmd"
+```

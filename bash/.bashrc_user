@@ -1,0 +1,22 @@
+# User specific aliases and functions
+for f in $HOME/.env/*
+do
+    [[ -f $f ]] && . $f
+done
+
+unsetopt share_history
+setopt no_share_history
+
+if [[ $SHELL =~ zsh ]]; then
+my-backward-delete-word() {
+    local WORDCHARS='*?_-.[]~=&;!#$%^(){}<>:,"'"'"
+    zle backward-delete-word
+}
+zle -N my-backward-delete-word
+bindkey '^W' my-backward-delete-word
+# Remove forward-char widgets from ACCEPT
+#ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=("${(@)ZSH_AUTOSUGGEST_ACCEPT_WIDGETS:#forward-char}")
+
+# Add forward-char widgets to PARTIAL_ACCEPT
+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=(forward-word)
+fi

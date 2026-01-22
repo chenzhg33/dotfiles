@@ -1,0 +1,41 @@
+# Update every <interval> samples:
+top -i <interval>
+
+# Set the delay between updates to <delay> seconds:
+top -s <delay>
+
+# Set event counting to accumulative mode:
+top -a
+
+# Set event counting to delta mode:
+top -d
+
+# Set event counting to absolute mode:
+top -e
+
+# Do not calculate statistics on shared libraries, also known as frameworks:
+top -F
+
+# Calculate statistics on shared libraries, also known as frameworks (default):
+top -f
+
+# Print command line usage information and exit:
+top -h
+
+# Order the display by sorting on <key> in descending order
+top -o <key>
+
+# -b 批量模式，输出所有的进程信息，一般和 -n 1 配合使用， top -b -n 1
+top -b -n 1
+
+#进入top后：
+d 设置屏幕刷新间隔时间
+E 改变统计区域 内存使用情况的单位
+I Irix/Solaris-Mode off的话，任务的cpu使用率会除以所有的cpu的个数
+1 显示每个cpu的信息
+c 显示完整命令，而不是进程名
+V 显示进程树
+n 设置显示进程的个数
+M 按内存排序
+P 按cpu排序
+T 按cpu使用时间排序
