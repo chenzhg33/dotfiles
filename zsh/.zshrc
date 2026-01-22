@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.bashrc_user ]] && source ~/.bashrc_user
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
-[[ -f ~/.bashrc_zhgchen ]] && source ~/.bashrc_zhgchen
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+[ -f ~/.resh/shellrc ] && source ~/.resh/shellrc # this line was added by RESH
