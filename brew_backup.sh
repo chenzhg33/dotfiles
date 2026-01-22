@@ -1,5 +1,7 @@
 # Backup homebrew packages
-brew leaves >> "brew.txt"
+echo >"brew.txt"
+brew leaves >>"brew.txt"
 
 # Backup cask packages
-brew list -c >> "cask.txt"
+echo >"cask.txt"
+brew list -c >>"cask.txt"
